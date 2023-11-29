@@ -41,12 +41,13 @@ function App() {
     setNotes(notes);
   }
 
-  function deleteNote(id) {
+  async function deleteNote(id) {
     setNotes(prevNotes => {
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
       });
     });
+    notes = await dkeeper_backend.deleteNotes(id);
   }
 
   return (

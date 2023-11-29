@@ -27,11 +27,9 @@ actor DKeeper {
     List.toArray(notes);
   };
  public func deleteNotes(index:Nat) : async [Note]  {
-  if(index>=1){
-    let notes1 = List.take(notes, index-1);
-    let notes2 = List.drop(notes, index);
+    let notes1 = List.take(notes, index);
+    let notes2 = List.drop(notes, index+1);
     notes:= List.append(notes1,notes2);
-  };
     return List.toArray(notes);
   };
 
