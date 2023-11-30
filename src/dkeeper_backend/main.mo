@@ -14,7 +14,6 @@ actor DKeeper {
   content: Text;
   };
   stable var notes: List.List<Note> = List.nil<Note>();
-
   public func createNote (titleText: Text, contentText: Text) {
   let newNote: Note = {
   title = titleText;
@@ -32,6 +31,4 @@ actor DKeeper {
     notes:= List.append(notes1,notes2);
     return List.toArray(notes);
   };
-
-
 }
