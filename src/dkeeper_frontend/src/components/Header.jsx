@@ -26,7 +26,7 @@ function Header() {
       <h1>
         {/* <img src= "../../assets/note.png" alt="🙂" /> */}
         <FontAwesomeIcon className="header-icon" icon={faNoteSticky} />
-        D Noter
+        Task Master
       </h1>
     </header>
   );
